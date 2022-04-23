@@ -10,10 +10,10 @@ public class PluginResources {
 	
 	public static final FileSave MONITOR_WHITE_LIST = new FileSave("whitelist", "/", new String[] {"whitelist", "host", "name"});
 	
-	public static final PluginFile ROOM_SAVER = getPluginFile("room_saver", "cjson", "/", "{\"rooms\": []}");
+	public static final PluginFile ROOM_SAVER = getPluginFile("room_saver", "cjson", "/", false, "{\"rooms\": []}");
 	
-	public static PluginFile getPluginFile(String fileName, String suff, String path, String lines) {
-		return new PluginFile(fileName, suff, path) {
+	public static PluginFile getPluginFile(String fileName, String suff, String path, boolean overwritable, String lines) {
+		return new PluginFile(fileName, suff, path, overwritable) {
 			
 			@Override
 			public String[] getLines() {
@@ -22,8 +22,8 @@ public class PluginResources {
 		};
 	}
 	
-	public static PluginFile getPluginFile(File file, String lines) {
-		return new PluginFile(file) {
+	public static PluginFile getPluginFile(File file, boolean overwritable, String lines) {
+		return new PluginFile(file, overwritable) {
 			
 			@Override
 			public String[] getLines() {
