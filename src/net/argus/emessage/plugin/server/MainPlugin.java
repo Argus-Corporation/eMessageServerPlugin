@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.argus.emessage.plugin.server.command.PluginCommands;
-import net.argus.emessage.server.MainServer;
 import net.argus.event.net.server.ServerEvent;
 import net.argus.event.net.server.ServerListener;
 import net.argus.monitoring.server.MonitorWhiteList;
